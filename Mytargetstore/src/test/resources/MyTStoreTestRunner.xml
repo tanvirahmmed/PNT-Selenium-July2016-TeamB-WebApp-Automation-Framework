@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Target Retails Store" parallel="tests">
+
+    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="userName" value="tanvirahmmed"/>
+    <parameter name="accessKey" value="aa226b5e-a234-4c15-ad00-bce470dfa023"/>
+    <parameter name="os" value="Win8"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="browserVersion" value="48.0"/>
+    <parameter name="url" value="https://www.target.com/"/>
+    <parameter name="testcase" value="Team : B (Tanvir) - user Registration"/>
+
+
+    <test name = "Target Store ">
+        <classes>
+          <!--  <class name="home.MyTargetStoreBasicSearchByKeyword"/> -->
+    <!--   <class name="home.search.MyTargetStoreDynamicKeywordSearch"/> -->
+          <!--  <class name="home.search.MyTargetStoreLogin"/> -->
+           <!--  <class name="home.search.MyTargetStoreLogout"/> ->
+
+           <!- -  <class name="home.MyTargetViewAccount"/> -->
+           <!-- <class name="home.MyTargetStoreOrderList"/> -->
+
+          <!-- <class name="home.search.MyTargetUserReg"/> -->
+
+           <class name="home.search.MyTargetUserReg"/>
+
+           <!-- <class name="home.search.MyTargetStoreSubs"/> -->
+
+           <!-- <class name="home.search.MyTargetAddToCart"/>-->
+
+           <!-- <class name="home.MyTargetViewAccount"/> -->
+
+        </classes>
+    </test>
+
+</suite>
