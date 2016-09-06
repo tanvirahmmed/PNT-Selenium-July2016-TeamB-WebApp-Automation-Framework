@@ -17,7 +17,7 @@ public class UserLoginFacebook extends Base{
     public void faceBookLogin()throws IOException,InterruptedException {
         //initialize Search page factory
         FacebookHomePage userLogin =  PageFactory.initElements(driver, FacebookHomePage.class); //new UserLoginPage();
-        userLogin.faceBookLogin("rinko.ewu@gmail.com","Rinko11435");
+        userLogin.faceBookLogin("rinko.ewu@gmail.com","000999");
         sleepFor(50);
 
 
