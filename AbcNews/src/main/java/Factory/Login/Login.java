@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 public class Login extends Base {
 
-
     WebDriver driver;
     public Login (WebDriver driver) {
         this.driver = driver;
