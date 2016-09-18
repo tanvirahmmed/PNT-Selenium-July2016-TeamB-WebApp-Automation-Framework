@@ -11,7 +11,7 @@ public class Tabs_Testing extends Base {
     public void TestSignIn() throws InterruptedException {
         // PAGE_FACTORY INITIALIZATION
         Tabs src = PageFactory.initElements(driver, Tabs.class);
-        // TEST
+        // TESTs
         src.tabs();
     }
 }
