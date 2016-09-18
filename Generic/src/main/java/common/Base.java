@@ -24,17 +24,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-//import org.apache.log4j.Level;
-
 
 /**
  * Created by rrt on 8/21/2016.
  */
 public class Base {
-
-
     public WebDriver driver = null;
-    //    public static Logger logger = LogManager.getLogger(Base.class);
     @Parameters({"useCloudEnv","userName","accessKey","os","browserName","browserVersion","url","testcase"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("tanvirahmmed") String userName, @Optional("aa226b5e-a234-4c15-ad00-bce470dfa023")
@@ -44,14 +39,9 @@ public class Base {
         if(useCloudEnv==true){
             //run in cloud
             getCloudDriver(userName,accessKey,os,browserName,browserVersion,testcase);
-//            logger.setLevel(Level.INFO);
-//            logger.info("Test is running on Saucelabs");
         }else{
-            //run in local
             getLocalDriver(browserName);
-//            logger.info("Test is running on Local");
         }
-
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
@@ -60,7 +50,6 @@ public class Base {
 
     public WebDriver getLocalDriver(String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            //C:\Users\rinko\IdeaProjects\classproject08272016\micro-wave\Generic\selenium-browser-driver
             System.setProperty("webdriver.chrome.driver","C:\\Users\\rinko\\IdeaProjects\\classproject08272016\\micro-wave\\Generic\\selenium-browser-driver\\chromedriver.exe");
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
@@ -93,6 +82,10 @@ public class Base {
 
     public void clickByCss(String locator) {
         driver.findElement(By.cssSelector(locator)).click();
+    }
+
+    public void clickById(String locator) {
+        driver.findElement(By.id(locator)).click();
     }
 
     public void clickByXpath(String locator) {

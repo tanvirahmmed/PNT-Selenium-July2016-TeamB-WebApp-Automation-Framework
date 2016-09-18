@@ -3,14 +3,14 @@
 
 <suite name="Target Retails Store" parallel="tests">
 
-    <parameter name="useCloudEnv" value="true"/>
-    <parameter name="userName" value="tanvirbbcvbcvahmmed"/>
-    <parameter name="accessKey" value="a234-4c15-00-bce470dfa023"/>
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="userName" value="rinkobd"/>
+    <parameter name="accessKey" value="ed7a1d64-342b-4e01-a716-65f92c5a0211"/>
     <parameter name="os" value="Win8"/>
     <parameter name="browserName" value="firefox"/>
     <parameter name="browserVersion" value="48.0"/>
     <parameter name="url" value="https://www.target.com/"/>
-    <parameter name="testcase" value="Team : B (Tanvir) - user Registration"/>
+    <parameter name="testcase" value="Team : B (Tanvir) - Target Store"/>
 
 
     <test name = "Target Store ">
@@ -25,11 +25,11 @@
 
           <!-- <class name="home.search.MyTargetUserReg"/> -->
 
-           <class name="home.search.MyTargetUserReg"/>
+          <!--  <class name="home.search.MyTargetWithConditionAndAddToCart"/> -->
 
            <!-- <class name="home.search.MyTargetStoreSubs"/> -->
 
-           <!-- <class name="home.search.MyTargetAddToCart"/>-->
+           <class name="home.search.MyTargetAddToCart"/>
 
            <!-- <class name="home.MyTargetViewAccount"/> -->
 

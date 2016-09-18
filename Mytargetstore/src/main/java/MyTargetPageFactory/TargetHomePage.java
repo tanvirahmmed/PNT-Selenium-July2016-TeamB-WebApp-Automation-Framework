@@ -43,19 +43,6 @@ public class TargetHomePage extends Base {
     @FindBy(how = How.XPATH, using = ".//*[@id='guest-sign-out']")
     public static WebElement MyAccountSignOut;
 
-
-// Follwing Variable for Registration
-
-    /*
-    newEmailSide
-firstNameSide
-lastNameSide
-logonPasswordSide
-.//*[@id='guest-registration-form']/div[6]/button
-     */
-
-
-
     @FindBy(how = How.ID, using = "rightNav-createAccount")
     public static WebElement createAccountLink;
 
@@ -109,17 +96,9 @@ logonPasswordSide
         lastName.sendKeys(loginData[2]);
         sleepFor(2);
         typeByCss(".js-adaptiveInput.js-newAccLogonPassword",loginData[3]);
-        // logonPassword.sendKeys(loginData[3]);
-
         sleepFor(2);
         regBtn.click();
     }
-
-
-
-
-
-
 
     public void clearSearchInput(){
         HomePageSearchBoxId.clear();

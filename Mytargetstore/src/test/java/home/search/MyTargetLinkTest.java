@@ -27,9 +27,6 @@ public class MyTargetLinkTest extends Base {
             sleepFor(2);
             clickByXpath("//*[@id='secondaryNavigation']/ul/li[1]/a");
            sleepFor(3);
-
-           // clickByXpath("//*[@id='secondaryNavigation']/ul/li[3]/a");
-            //sleepFor(3);
         }
 
 

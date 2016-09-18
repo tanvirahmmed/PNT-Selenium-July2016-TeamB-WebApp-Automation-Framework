@@ -3,7 +3,6 @@ package home.login;
 import FacebookPageFactory.FacebookHomePage;
 import common.Base;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 
@@ -13,12 +12,12 @@ import java.io.IOException;
 public class UserLoginFacebook extends Base{
 
 
-    @Test
+
     public void faceBookLogin()throws IOException,InterruptedException {
         //initialize Search page factory
-        FacebookHomePage userLogin =  PageFactory.initElements(driver, FacebookHomePage.class); //new UserLoginPage();
-        userLogin.faceBookLogin("rinko.ewu@gmail.com","000999");
-        sleepFor(50);
+        FacebookHomePage userLogin =  PageFactory.initElements(driver, FacebookHomePage.class);
+        userLogin.faceBookLogin("9293517459","rinko321");
+        sleepFor(5);
 
 
     }

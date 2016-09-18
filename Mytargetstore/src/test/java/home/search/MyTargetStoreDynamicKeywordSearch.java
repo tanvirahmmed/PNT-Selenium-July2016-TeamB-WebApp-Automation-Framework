@@ -17,8 +17,6 @@ public class MyTargetStoreDynamicKeywordSearch extends Base {
     public void myTargetStoreBasicSearch()throws IOException,InterruptedException {
         //initialize Search page factory
         TargetHomePage targetSearch =  PageFactory.initElements(driver, TargetHomePage.class); //new UserLoginPage();
-        //targetSearch.myTargetStoreBasicSearch("beats headphones");
-
         DataReader dr = new DataReader();
         String path = System.getProperty("user.dir")+"/DataTest/file1.xls";
         String [] st = dr.fileReader(path);
@@ -27,9 +25,5 @@ public class MyTargetStoreDynamicKeywordSearch extends Base {
             sleepFor(2);
             targetSearch.clearSearchInput();
         }
-
-      //  sleepFor(10);
-
-
     }
 }

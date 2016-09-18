@@ -52,12 +52,6 @@ public class CommonMyTargetMethods extends Base {
 
     public String[] loginCredential() throws SQLException, IOException, ClassNotFoundException {
         ConnectMySqlDB objMySqlObj = new ConnectMySqlDB();
-
-
-     //   ConnectMySqlDB objData = new ConnectMySqlDB();
-
-        //objData.c
-
         String LoginId = "";
         String LoginPass = "";
         String[] loginCre = {"test1", "test1"};
@@ -83,7 +77,6 @@ public class CommonMyTargetMethods extends Base {
         String[] loginCre = {"FirstName", "LastName", "EmailID@gmail.com", "Rinko321"};
         connect = objMySqlObj.connectToDatabase2();
         statement = connect.createStatement();
-        // statement = connect.createStatement();
         resultSet = statement.executeQuery("select * from tbl_registration_test_data limit 0,1");
 
 

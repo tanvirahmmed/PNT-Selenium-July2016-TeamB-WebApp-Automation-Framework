@@ -16,7 +16,7 @@
             <!--<class name="home.page.Search"/>-->
             <!--  <class name="home.page.SearchProduct"/> -->
            <!-- <class name="home.login.UserLoginFacebook"/> -->
-            <class name="home.login.UserLoginFacebook"/>
+            <class name="home.login.FacebookHomePageActivities"/>
 
         </classes>
     </test>

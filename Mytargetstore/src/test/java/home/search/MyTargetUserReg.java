@@ -9,11 +9,7 @@ import org.testng.annotations.Test;
 public class MyTargetUserReg extends CommonMyTargetMethods {
     @Test
     public void myTargetReg() throws Exception {
-
-      // Test Data Grab from MySQL Database for Registrations
-
         String [] getRegData = getRegistrationTestData();
-
         clickByXpath("//*[@id='js-toggleRightNavLg']");
         sleepFor(2);
         clickByXpath("//*[@id='rightNav-createAccount']");
@@ -25,8 +21,6 @@ public class MyTargetUserReg extends CommonMyTargetMethods {
         typeByCss(".js-adaptiveInput.js-newAccLogonPassword",getRegData[3]);
         clickByXpath("//*[@id='guest-registration-form']/div[6]/button");
         sleepFor(10);
-
-
 
     }
 }

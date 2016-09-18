@@ -11,15 +11,6 @@ import org.openqa.selenium.support.ui.Select;
  */
 public class FacebookHomePage {
 
-
-  /*  typeByXpathValue("//*[@id='email']","rinko.ewu@gmail.com");
-    typeByXpathValue("//*[@id='pass']","rinko11435");
-    clickByXpath("//*[@id='loginbutton']");
-    sleepFor(15);*/
-
-
-
-
     @FindBy(how = How.XPATH, using = "//*[@id='email']")
     public static WebElement userEmail;
 
@@ -67,6 +58,47 @@ public class FacebookHomePage {
     @FindBy(how = How.ID, using = "u_0_i")
     public static WebElement btnNewRegSubmit ;
 
+    // Following Page objects for Home page Search by Name
+
+//.//*[@id='u_5_2']/input[1]
+    @FindBy(how = How.CSS, using = "._1frb")
+    public static WebElement SearchTextClick ;
+
+    @FindBy(how = How.CSS, using = "._1frb")
+    public static WebElement SearchTextBox ;
+
+    @FindBy(how = How.CSS, using = "._585_")
+    public static WebElement SearchTextButton ;
+
+
+
+    @FindBy(how = How.XPATH, using = "//*[@id='u_0_2']/div[1]/div[1]/div/a/span")
+    public static WebElement ClickforMyHome ;
+
+
+    @FindBy(how = How.XPATH, using = "//*[@id='findFriendsNav']")
+    public static WebElement FindFriendLink ;
+
+
+    @FindBy(how = How.CSS, using = "._42ft _4jy0 _4jy3 _4jy1 selected _51sy")
+    public static WebElement AddFriendButtoon ;
+
+
+    public void faceBookSearchByName(String Name)
+    {
+        SearchTextClick.click();
+        SearchTextBox.sendKeys(Name);
+        SearchTextButton.click();
+
+    }
+
+    public void AddFriend()
+    {
+        FindFriendLink.click();
+        AddFriendButtoon.click();
+        //SearchTextButton.click();
+    }
+
 
     public void faceBookLogin(String uID, String Pass){
         userEmail.sendKeys(uID);
@@ -80,8 +112,6 @@ public class FacebookHomePage {
 
         final Select selectBox = new Select(month);
         selectBox.selectByValue(RegData[4]);
-
-
         firstName.sendKeys(RegData[0]);
         lastName.sendKeys(RegData[1]);
         mobileNo.sendKeys(RegData[2]);
