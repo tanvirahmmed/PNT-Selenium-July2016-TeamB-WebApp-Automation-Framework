@@ -1,6 +1,6 @@
 package CreateAnAccount_Test;
-import Common.Base;
 import FACROTY.CreateAnAccount.CreateAnAccount;
+import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 public class TestCreateAnAccount extends Base {

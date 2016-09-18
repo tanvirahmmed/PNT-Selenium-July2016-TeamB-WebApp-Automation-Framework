@@ -1,6 +1,6 @@
 package AddToCart_Test;
-import Common.Base;
 import FACROTY.AddToCart.AddToCart;
+import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 public class TestAddToCart extends Base{

@@ -1,6 +1,6 @@
 package Searchs;
-import Common.Base;
 import FromDatabaseAndFactory.DBFactory;
+import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import utility.ConnectMySqlDB;

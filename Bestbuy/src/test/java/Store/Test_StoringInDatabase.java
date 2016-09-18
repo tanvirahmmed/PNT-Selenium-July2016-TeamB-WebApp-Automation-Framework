@@ -1,6 +1,6 @@
 package Store;
-import Common.Base;
 import StoreInDB.StoreInDatabase;
+import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import utility.ConnectMySqlDB;

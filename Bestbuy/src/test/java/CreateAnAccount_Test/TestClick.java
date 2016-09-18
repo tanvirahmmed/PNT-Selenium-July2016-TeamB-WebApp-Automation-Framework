@@ -1,7 +1,7 @@
 package CreateAnAccount_Test;
 
-import Common.Base;
 import Test_Factory.Factory_Test;
+import common.Base;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
