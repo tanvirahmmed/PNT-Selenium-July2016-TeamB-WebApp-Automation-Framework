@@ -1,6 +1,5 @@
 package Factory.Login;
 import common.Base;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +21,7 @@ public class Login extends Base {
     @FindBy(css = "#disneyid-iframe")
     public static WebElement iframeID;
 
-    @FindBy(how = How.XPATH, using = ".//*[@id='did-ui']/div/div/section/section/form/section/div[1]/div/label/span[2]/input")
+    @FindBy(how = How.XPATH, using = "//input [@type='email']")
     public static WebElement typeEmail;
 
     @FindBy(how = How.XPATH, using = "//input [@type='password']")
@@ -35,11 +34,11 @@ public class Login extends Base {
     // ALL THE METHODS GOES HERE
     // ALL THE METHODS GOES HERE
 
-    public void signIn(String email, String password) throws InterruptedException {
+    public void login (String email, String password) throws InterruptedException {
         sleepFor(3);
         clickOnLogIn.click();
         sleepFor(2);
-        iframeHandle(driver.findElement(By.id("#disneyid-iframe")));
+        driver.switchTo().frame(iframeID);
         sleepFor(1);
         typeEmail.sendKeys(email);
         typePassword.sendKeys(password);

@@ -13,6 +13,6 @@ public class Login_Test extends Base{
         // PAGE_FACTORY INITIALIZATION
         Login src = PageFactory.initElements(driver, Login.class);
         // TEST
-        src.signIn(email, password );
+        src.login(email, password);
     }
 }

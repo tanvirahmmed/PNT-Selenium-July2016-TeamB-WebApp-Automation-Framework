@@ -38,8 +38,8 @@ public class Base {
     @Parameters({"useCloudEnv","userName","accessKey","os","browserName","browserVersion","url","testcase"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("tanvirahmmed") String userName, @Optional("aa226b5e-a234-4c15-ad00-bce470dfa023")
-            String accessKey, @Optional("Windows 8") String os, @Optional("firefox") String browserName, @Optional("34")
-                              String browserVersion, @Optional("http://www.target.com") String url,@Optional("Sample Test Case") String testcase)throws IOException {
+            String accessKey, @Optional("Windows 8") String os, @Optional("chrome") String browserName, @Optional("53.0.2785.116")
+                              String browserVersion, @Optional("http://abcnews.go.com/") String url,@Optional("Sample Test Case") String testcase)throws IOException {
         BasicConfigurator.configure();
         if(useCloudEnv==true){
             //run in cloud
@@ -61,10 +61,10 @@ public class Base {
     public WebDriver getLocalDriver(String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             //C:\Users\rinko\IdeaProjects\classproject08272016\micro-wave\Generic\selenium-browser-driver
-            System.setProperty("webdriver.chrome.driver","C:\\Users\\rinko\\IdeaProjects\\classproject08272016\\micro-wave\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","A:\\New folder\\Selenium\\Selenium_Projects\\PNT-Selenium-July2016-TeamB-WebApp-Automation-Framework\\Generic\\selenium-browser-driver\\chromedriver.exe");
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver","C:\\Users\\rinko\\IdeaProjects\\classproject08272016\\micro-wave\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver","A:\\New folder\\Selenium\\Selenium_Projects\\PNT-Selenium-July2016-TeamB-WebApp-Automation-Framework\\Generic\\selenium-browser-driver\\geckodriver.exe");
             driver = new FirefoxDriver();
         } else if(browserName.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", "C:\\Users\\rinko\\IdeaProjects\\classproject08272016\\micro-wave\\Generic\\selenium-browser-driver\\IEDriverServer.exe");
